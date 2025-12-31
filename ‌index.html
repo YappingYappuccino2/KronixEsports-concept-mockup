@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kronix Esports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red-dark: #7a0c1a;
+      --red-main: #b11226;
+      --red-bright: #ff2a3c;
+      --black: #0b0b0d;
+      --white: #ffffff;
+      --muted: #d7b5bb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, var(--red-dark), var(--black));
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    nav img {
+      height: 48px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav li {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    nav li:hover {
+      color: var(--red-bright);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 85vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 3.5rem 2rem 2rem; /* reduced bottom padding */
+      background: radial-gradient(circle at top, rgba(255,42,60,0.25), transparent 60%);
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .hero h1 span {
+      color: var(--red-bright);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 1.5rem auto 2.5rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero .cta {
+      padding: 0.9rem 2.5rem;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, var(--red-main), var(--red-bright));
+      border: none;
+      color: var(--white);
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 999px;
+      box-shadow: 0 0 30px rgba(255,42,60,0.4);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 3.5rem 3rem; /* tightened vertical rhythm */
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    /* TEAMS */
+    .teams {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(0,0,0,0.5));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 40px rgba(255,42,60,0.25);
+    }
+
+    .team-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ABOUT */
+    .about {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .about p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050506;
+      padding: 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer span {
+      color: var(--red-bright);
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <img src="logo.webp" alt="Kronix Esports Logo" />
+    <ul>
+      <li>Home</li>
+      <li>Teams</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>KRONIX <span>ESPORTS</span></h1>
+      <p>
+        Forged in competition. Built for domination. Kronix Esports is the next‑generation esports organization pushing talent, discipline, and raw ambition.
+      </p>
+      <button class="cta">JOIN THE KRONIX</button>
+    </div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <section style="padding: 2.5rem 3rem 1.5rem;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center;">
+      <div><h3 style="font-family:Orbitron;font-size:1.8rem;color:var(--red-bright);">3+</h3><span style="color:var(--muted);">Active Rosters</span></div>
+      <div><h3 style="font-family:Orbitron;font-size:1.8rem;color:var(--red-bright);">25+</h3><span style="color:var(--muted);">Competitive Players</span></div>
+      <div><h3 style="font-family:Orbitron;font-size:1.8rem;color:var(--red-bright);">100%</h3><span style="color:var(--muted);">Hunger</span></div>
+    </div>
+  </section>
+
+  <!-- TEAMS -->
+  <section>
+    <h2>OUR ROSTERS</h2>
+    <div class="teams">
+      <div class="team-card">
+        <h3>VALORANT</h3>
+        <span>Precision. Discipline. Clutch.</span>
+      </div>
+      <div class="team-card">
+        <h3>CS2</h3>
+        <span>Raw aim meets strategy.</span>
+      </div>
+      <div class="team-card">
+        <h3>BGMI</h3>
+        <span>Mobile warfare at its peak.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>WHO WE ARE</h2>
+    <p>
+      Kronix Esports is an up‑and‑coming competitive organization focused on developing high‑potential players and building a legacy rooted in hunger and execution. We don’t chase trends — we set tempo.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>KRONIX ESPORTS</span>. Mockup Concept Website.
+  </footer>
+
+</body>
+</html>
